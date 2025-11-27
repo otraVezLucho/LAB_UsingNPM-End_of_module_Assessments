@@ -1,3 +1,19 @@
 body{
     background-image: url(image/fondo.png);
 }
+header{
+    background-color: rgba(0, 0, 0, 0.818);
+    align-items: center;
+    text-align: center;
+    width: auto;   
+}
+.contenedor{
+  display: flex;
+  gap: 20px;
+}
+
+.columna{
+  width: 50%;
+  padding: 20px;
+  border: 5px solid black;
+}
