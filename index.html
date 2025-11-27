@@ -1,12 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Imagen- NASA</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
     <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
+    <h1>Imagen - NASA</h1>
     
+    <div>
+        <label for="fechaInput">Selecciona una fecha:</label>
+        <input type="date" id="fechaInput">
+        <button onclick="buscarImg()">Buscar Imagen</button>
+        <button onclick="buscarHoy()">Imagen de Hoy</button>
+    </div>
+    
+    <div id="resultados"></div>
+    <script src="script.js"></script>
 </body>
 </html>
