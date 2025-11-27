@@ -1,42 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Imagen NASA</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
+
 <body>
-    <div id="calendario"></div>
-    <img id="imagenApi" class="img-fluid mt-3" alt="Imagen API">
+
     <header>
-        <div>
-            <h1>API NASA</h1>
-        </div>
+        <h1>API NASA</h1>
     </header>
-   <div class="contenedor">
 
- 
-  <div class="columna">
-    <div class="card" style="width: 18rem;">
-      <img src="imagenes/tu_imagen.jpg" class="card-img-top" alt="...">
+    <div id="calendario"></div>
 
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">
-          This is a longer card with supporting text below as a natural lead-in to additional content.
-        </p>
-        <button type="button" class="btn btn-outline-secondary">Favoritos</button>
-      </div>
+    <img id="imagenApi" class="img-fluid mt-3" alt="Imagen API">
+
+    <div class="contenedor">
+        <div class="columna">
+            <div class="card" style="width: 18rem;">
+                <img src="imagenes/tu_imagen.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Texto de ejemplo</p>
+                    <button type="button" class="btn btn-outline-secondary">Favoritos</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="columna">
+            <h2>Favoritos</h2>
+            <p>Contenido aquí…</p>
+        </div>
     </div>
-  </div>
-  <div class="columna">
-    <h2>Favoritos</h2>
-    <p>wadjawhdvjgavw</p>
-  </div>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-<script type="module" src="./script.js"></script>
+
+    <h2>Buscar imagen de NASA</h2>
+
+    <div>
+        <label for="fechaInput">Selecciona una fecha:</label>
+        <input type="date" id="fechaInput">
+        <button onclick="buscarImg()">Buscar Imagen</button>
+        <button onclick="buscarHoy()">Imagen de Hoy</button>
+    </div>
+
+    <div id="resultados"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    
+    <script src="script.js"></script>
+
 </body>
 </html>
