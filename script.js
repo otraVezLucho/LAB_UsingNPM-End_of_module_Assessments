@@ -1,4 +1,5 @@
 const calendario = document.getElementById("calendario");
+const apiCard = document.getElementById("apiCard");
 const imagenApi = document.getElementById("imagenApi");
 const tituloApi = document.getElementById("tituloApi");
 const descripcionApi = document.getElementById("descripcionApi");
@@ -29,6 +30,8 @@ async function cargarImagenNASA(fecha) {
         // Si es imagen
         if (data.media_type === "image") {
             imagenApi.src = data.url;
+            apiCard.classList.replace("d-none", "d-flex");
+            
         } else {
             imagenApi.src = "";
             alert("Este día la NASA publicó un video, no una imagen");

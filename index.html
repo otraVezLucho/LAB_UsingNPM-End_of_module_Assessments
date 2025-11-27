@@ -17,24 +17,24 @@
     </header>
     <h2 class="mt-4 text-center text-light">Buscar imagen de NASA</h2>
     <div class="container d-flex w-25 justify-content-center">
-        <div class="input-group">
-            <input type="date" class="form-control" style="widh: 200px;" placeholder="Selecciona una fecha"
+        <div class="input-group w-50">
+            <input type="date" class="form-control text-center w-25" placeholder="Selecciona una fecha"
                 id="fechaInput">
-            <button onclick="buscarImg()" class="btn btn-dark">Buscar Imagen</button>
-            <button onclick="buscarHoy()" class="btn btn-dark">Imagen de Hoy</button>
+            <button onclick="buscarImg()" class="btn btn-dark w-25">Buscar Imagen</button>
+            <button onclick="buscarHoy()" class="btn btn-dark w-25">Imagen de Hoy</button>
         </div>
     </div>
-    <div id="resultados w-25"></div>
+
     <div class="contenedor justify-content-center">
         <div class="columna d-flex justify-content-center w-50">
 
-            <div class="card mt-3 w-100 bg-dark p-5">
-                <div class="d-flex flex-column mx-auto align-items-center">
+            <div class="card  w-100 bg-dark p-5">
+                <div class="d-none flex-column mx-auto align-items-center " id="apiCard">
                     <img id="imagenApi" src="" class="card-img-top w-100 pt-3" alt="Imagen NASA">
                     <div class="card-body w-100 p-0">
                         <h5 class="card-title" id="tituloApi">Título aquí</h5>
                         <p class="card-text text-light" id="descripcionApi">
-                            Descripción de la imagen aquí...
+                            Selecciona una fecha y veras la...
                         </p>
                         <button type="button" class="btn btn-outline-secondary" id="btnFavorito">
                             Añadir a favoritos
@@ -46,11 +46,10 @@
                     <div id="contenedor-video">
                         <video
                             src="http://images-assets.nasa.gov/video/jsc2025m000033_Chris Williams Astronaut Moments_AVAIL/jsc2025m000033_Chris Williams Astronaut Moments_AVAIL~orig.mp4"
-                            id="video" controls>
+                            id="video" class="w-100 rounded"  controls autoplay muted>
                         </video>
                     </div>
                 </section>
-
             </div>
         </div>
 
@@ -63,9 +62,6 @@
         </div>
 
     </div>
-    <!-- TODO LO DEMÁS VA DEBAJO DE LAS COLUMNAS -->
-
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
