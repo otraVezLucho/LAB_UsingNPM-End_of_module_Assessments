@@ -15,32 +15,46 @@
     <header>
         <h1>API NASA</h1>
     </header>
-    <h2 class="mt-4">Buscar imagen de NASA</h2>
-    <div class="input-group">
-        <input type="date" class="form-control" style="widh: 200px;" placeholder="Selecciona una fecha" id="fechaInput">
-        <button onclick="buscarImg()" class="btn btn-outline-secondary">Buscar Imagen</button>
-        <button onclick="buscarHoy()" class="btn btn-outline-secondary">Imagen de Hoy</button>
+    <h2 class="mt-4 text-center text-light">Buscar imagen de NASA</h2>
+    <div class="container d-flex w-25 justify-content-center">
+        <div class="input-group">
+            <input type="date" class="form-control" style="widh: 200px;" placeholder="Selecciona una fecha"
+                id="fechaInput">
+            <button onclick="buscarImg()" class="btn btn-dark">Buscar Imagen</button>
+            <button onclick="buscarHoy()" class="btn btn-dark">Imagen de Hoy</button>
+        </div>
     </div>
-    <div id="resultados"></div>
-    <div class="contenedor ">
-        <div class="columna w-75 justify-content-center d-flex">
+    <div id="resultados w-25"></div>
+    <div class="contenedor justify-content-center">
+        <div class="columna d-flex justify-content-center w-50">
 
-            <div class="card mt-3 w-75 ">
-                <img id="imagenApi" src="" class="card-img-top" alt="Imagen NASA">
-                <div class="card-body">
-                    <h5 class="card-title" id="tituloApi">Título aquí</h5>
-                    <p class="card-text" id="descripcionApi">
-                        Descripción de la imagen aquí...
-                    </p>
-                    <button type="button" class="btn btn-outline-secondary" id="btnFavorito">
-                        Añadir a favoritos
-                    </button>
+            <div class="card mt-3 w-100 bg-dark p-5">
+                <div class="d-flex flex-column mx-auto align-items-center">
+                    <img id="imagenApi" src="" class="card-img-top w-100 pt-3" alt="Imagen NASA">
+                    <div class="card-body w-100 p-0">
+                        <h5 class="card-title" id="tituloApi">Título aquí</h5>
+                        <p class="card-text text-light" id="descripcionApi">
+                            Descripción de la imagen aquí...
+                        </p>
+                        <button type="button" class="btn btn-outline-secondary" id="btnFavorito">
+                            Añadir a favoritos
+                        </button>
+                    </div>
                 </div>
+
+                <section id="seccion-video">
+                    <div id="contenedor-video">
+                        <video
+                            src="http://images-assets.nasa.gov/video/jsc2025m000033_Chris Williams Astronaut Moments_AVAIL/jsc2025m000033_Chris Williams Astronaut Moments_AVAIL~orig.mp4"
+                            id="video" controls>
+                        </video>
+                    </div>
+                </section>
 
             </div>
         </div>
 
-        <!-- COLUMNA 2 -->
+
         <div class="columna w-25">
             <p class="h3 mb-4 text-center text-light">Calendario</p>
             <div id="calendario" class="m-1"></div>
@@ -49,18 +63,9 @@
         </div>
 
     </div>
-
     <!-- TODO LO DEMÁS VA DEBAJO DE LAS COLUMNAS -->
 
 
-    <section id="seccion-video">
-        <div id="contenedor-video">
-            <video
-                src="http://images-assets.nasa.gov/video/jsc2025m000033_Chris Williams Astronaut Moments_AVAIL/jsc2025m000033_Chris Williams Astronaut Moments_AVAIL~orig.mp4"
-                id="video" controls autoplay>
-            </video>
-        </div>
-    </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
