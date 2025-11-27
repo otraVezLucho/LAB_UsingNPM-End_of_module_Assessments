@@ -17,3 +17,20 @@ header{
   padding: 20px;
   border: 5px solid black;
 }
+#seccion-video{
+  width: 90%;
+  
+  margin: 0 auto;
+  margin-top: 40px;
+  justify-content: center;
+}
+#contenedor-video{
+  display: flex;
+  justify-content: center;
+  
+
+}
+
+#video{
+  width: 80%;
+}
