@@ -1,44 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Imagen NASA</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
+
 <body>
+
     <header>
-        <div>
-            <h1>API NASA</h1>
-        </div>
+        <h1>API NASA</h1>
     </header>
-   <div class="contenedor">
-  <div class="columna">
-  <div class="card mb-3 w-100" style="max-width: 800px;">
-    <img src="image/Horizontal-Line-700x329.png" class="card-img-top">
-
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">
-        This is a wider card with supporting text below...
-      </p>
-      <p class="card-text">
-        <small class="text-body-secondary">Last updated 3 mins ago</small>
-      </p>
+    <h2 class="mt-4">Buscar imagen de NASA</h2>
+    <div class="input-group">
+        <input type="date" class="form-control" style="widh: 200px;" placeholder="Selecciona una fecha" id="fechaInput">
+        <button onclick="buscarImg()" class="btn btn-outline-secondary">Buscar Imagen</button>
+        <button onclick="buscarHoy()" class="btn btn-outline-secondary">Imagen de Hoy</button>
     </div>
-  </div>
-</div>
+    <div id="resultados"></div>
+    <div class="contenedor ">
+        <div class="columna w-75 justify-content-center d-flex">
 
-  <div class="columna">
-    <h2>Favoritos</h2>
-    <p>wadjawhdvjgavw</p>
-  </div>
+            <div class="card mt-3 w-75 ">
+                <img id="imagenApi" src="" class="card-img-top" alt="Imagen NASA">
+                <div class="card-body">
+                    <h5 class="card-title" id="tituloApi">Título aquí</h5>
+                    <p class="card-text" id="descripcionApi">
+                        Descripción de la imagen aquí...
+                    </p>
+                    <button type="button" class="btn btn-outline-secondary" id="btnFavorito">
+                        Añadir a favoritos
+                    </button>
+                </div>
 
-</div>
+            </div>
+        </div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- COLUMNA 2 -->
+        <div class="columna w-25">
+            <p class="h3 mb-4 text-center text-light">Calendario</p>
+            <div id="calendario" class="m-1"></div>
+            <h2>Favoritos</h2>
+            <p>Contenido aquí…</p>
+        </div>
 
-</div>
+    </div>
+
+    <!-- TODO LO DEMÁS VA DEBAJO DE LAS COLUMNAS -->
+
+
+    <section id="seccion-video">
+        <div id="contenedor-video">
+            <video
+                src="http://images-assets.nasa.gov/video/jsc2025m000033_Chris Williams Astronaut Moments_AVAIL/jsc2025m000033_Chris Williams Astronaut Moments_AVAIL~orig.mp4"
+                id="video" controls autoplay>
+            </video>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+
 </body>
+
 </html>
